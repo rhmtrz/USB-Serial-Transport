@@ -4,7 +4,9 @@ import (
 	"flag"
 	"log"
 
-	model "./pkg/model"
+	model "example/rhmtrz/txrx-mqtt/pkg/model"
+	"example/rhmtrz/txrx-mqtt/pkg/serialPort"
+
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 
@@ -27,7 +29,8 @@ func main() {
 
 	km := model.KeyManager()
 	keys := km.GetKeys()
-	println(keys.BaudRate)
 	msgChan := make(chan mqtt.Message)
+	serial := serialPort.NewSerial()
+	serial.Connect(keys.BaudRate)
 
 }
