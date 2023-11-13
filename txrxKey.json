@@ -1,5 +1,5 @@
 {
-    "mqttURL": "wss://mqtt.devwarp.work",
+    "mqttURL": "wss://example.com",
     "myId": "my_id",
     "destinationId": "destination_id",
     "baudRate": 115200

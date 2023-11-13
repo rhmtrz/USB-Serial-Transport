@@ -20,7 +20,7 @@ func KeyManeger() *WarpKey {
 
 func (k *WarpKey) LoadJson() {
 
-	jsonFile, err := os.Open("./warpKey.json")
+	jsonFile, err := os.Open("./txrxKey.json")
 	defer jsonFile.Close()
 	if err != nil {
 		log.Fatal(err)
