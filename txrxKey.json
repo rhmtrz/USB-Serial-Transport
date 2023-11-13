@@ -1,0 +1,7 @@
+{
+    "mqttURL": "wss://mqtt.devwarp.work",
+    "txId": "send-id",
+    "rxId": "receive-id",
+    "baudRate": 115200
+}
+  
