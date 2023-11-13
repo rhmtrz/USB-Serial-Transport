@@ -1,7 +1,8 @@
 {
     "mqttURL": "wss://mqtt.devwarp.work",
-    "txId": "send-id",
-    "rxId": "receive-id",
+    "myId": "my_id",
+    "destinationId": "destination_id",
     "baudRate": 115200
 }
+  
   

@@ -4,7 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/adawarp/go-signal-transceiver/pkg/serialPort"
+	"example/rhmtrz/txrx-mqtt/pkg/serialPort"
+
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 

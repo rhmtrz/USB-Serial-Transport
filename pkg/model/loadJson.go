@@ -1,4 +1,4 @@
-package loadJson
+package utilities
 
 import (
 	"encoding/json"
@@ -7,20 +7,20 @@ import (
 	"os"
 )
 
-type TxrxKey struct {
-	MqttURL  string `json:"mqttURL"`
-	TxId     string `json:"txId"`
-	RxId     string `json:"rxId"`
-	BaudRate int    `json:"baudRate"`
+type WarpKey struct {
+	MqttURL       string `json:"mqttURL"`
+	MyId          string `json:"myId"`
+	DestinationId string `json:"destinationId"`
+	BaudRate      int    `json:"baudRate"`
 }
 
-func KeyManager() *TxrxKey {
-	return &TxrxKey{}
+func KeyManeger() *WarpKey {
+	return &WarpKey{}
 }
 
-func (k *TxrxKey) LoadJson() {
+func (k *WarpKey) LoadJson() {
 
-	jsonFile, err := os.Open("./txrxKey.json")
+	jsonFile, err := os.Open("./warpKey.json")
 	defer jsonFile.Close()
 	if err != nil {
 		log.Fatal(err)
@@ -30,7 +30,7 @@ func (k *TxrxKey) LoadJson() {
 	json.Unmarshal(byteValue, &k)
 }
 
-func (k *TxrxKey) GetKeys() TxrxKey {
+func (k *WarpKey) GetKeys() WarpKey {
 	k.LoadJson()
 	return *k
 }

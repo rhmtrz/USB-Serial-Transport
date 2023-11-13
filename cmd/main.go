@@ -6,9 +6,10 @@ import (
 	"os"
 	"os/signal"
 
-	model "github.com/adawarp/go-signal-transceiver/pkg/model"
-	"github.com/adawarp/go-signal-transceiver/pkg/mqttConnection"
-	"github.com/adawarp/go-signal-transceiver/pkg/serialPort"
+	model "example/rhmtrz/txrx-mqtt/pkg/model"
+	"example/rhmtrz/txrx-mqtt/pkg/mqttConnection"
+	"example/rhmtrz/txrx-mqtt/pkg/serialPort"
+
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 
